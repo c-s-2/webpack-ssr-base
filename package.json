@@ -1,7 +1,7 @@
 {
-  "name": "webpack_4_base",
+  "name": "webpack_ssr_base",
   "version": "1.0.0",
-  "description": "base webpack 4 / react app",
+  "description": "base ssr / webpack 4 / react app",
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
