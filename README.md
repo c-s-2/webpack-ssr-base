@@ -14,4 +14,4 @@ _Runs webpack dev server with Hot Module Replacement_
 
 __Build__
 
-`npm build`
+`npm run compile`
