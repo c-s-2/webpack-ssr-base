@@ -18,7 +18,7 @@ const cssPlugin = new MiniCssExtractPlugin({
 });
 
 module.exports = {
-  entry: "./src/app.js", //specify a different entry file
+  entry: "./src/client.js", //specify a different entry file
   module: {
     rules: [
       {

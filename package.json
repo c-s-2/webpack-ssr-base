@@ -2,15 +2,17 @@
   "name": "webpack_ssr_base",
   "version": "1.0.0",
   "description": "base ssr / webpack 4 / react app",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "client": "webpack-dev-server --mode development --open",
+    "server": "webpack && nodemon src/start.js",
     "compile": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
@@ -24,6 +26,9 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "@babel/register": "^7.0.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   }
