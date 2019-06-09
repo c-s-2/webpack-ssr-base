@@ -25,6 +25,8 @@ __Build__
 
 __TODO__
 
-- Properly hydrate the client version with the initial state from the server (may need to separately bundle the app client entry file to stop issues when packing)
+- ~~Properly hydrate the client version with the initial state from the server (may need to separately bundle the app client entry file to stop issues when packing)~~
 
-- Stylesheets
+- ~~Stylesheets~~
+
+- Hot reload of CSS
