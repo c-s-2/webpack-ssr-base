@@ -6,18 +6,19 @@ import ReactDOMServer from 'react-dom/server';
 import App from './components/app';
 import Template from './template';
 
+const initialState = { text: 'Hello' };
 const server = express();
 
 server.use('/dist', express.static('dist'));
 
 server.get('/', (req, res) => {
   const component = ReactDOMServer.renderToString(
-    <App location="server" />
+    <App { ...initialState } />
   );
   const html = Template({
     content: component,
-    initialState: JSON.stringify({ location: 'server' }),
-    title: 'SSR from the server',
+    initialState: JSON.stringify(initialState),
+    title: 'Hello world',
   });
   res.send(html);
 });
