@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-// import style from '../stylesheets/app.scss';
-
 class App extends Component {
   constructor(props) {
     super(props);
