@@ -1,33 +1,21 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const App = ({ text }) => {
+  const [textContent, setTextContent] = useState(text);
 
-    this.state = { text: props.text };
-  }
-
-  saveText = (e) => {
-    this.setState({ text: e.target.value });
-  }
-
-  render () {
-    const { text } = this.state;
-
-    return (
-      <Fragment>
-        <h1>Hello World</h1>
-        <label htmlFor="text-entry">Enter:</label>
-        <input id="text-entry" onChange={ e => this.saveText(e) } type="text" />
-        <p>{ text }</p>
-      </Fragment>
-    );
-  }
+  return (
+    <Fragment>
+      <h1>Hello World</h1>
+      <label htmlFor="text-entry">Enter:</label>
+      <input id="text-entry" onChange={ e => setTextContent(e.target.value) } type="text" />
+      <p>{ textContent }</p>
+    </Fragment>
+  )
 };
 
 App.defaultProps = {
-  text: 'Hello',
+  text: '',
 }
 
 App.propTypes = {
