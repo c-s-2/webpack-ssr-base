@@ -26,8 +26,12 @@ class App extends Component {
   }
 };
 
+App.defaultProps = {
+  text: 'Hello',
+}
+
 App.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
 }
 
 export default App;

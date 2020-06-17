@@ -6,7 +6,7 @@ import ReactDOMServer from 'react-dom/server';
 import App from './components/app';
 import Template from './template';
 
-const initialState = { text: 'Hello' };
+const initialState = { text: 'World' };
 const server = express();
 
 server.use('/dist', express.static('dist'));
